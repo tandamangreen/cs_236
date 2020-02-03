@@ -22,15 +22,9 @@ void Param::addParamExp(string currentParam) {
 //*********************************************************************************************
 void Param::convert() {
     paramString = paramExp;
-    cout << "ParamExp = " << paramExp << endl;
-    cout << "ParamString = " << paramString << endl;
 }
 
 //*********************************************************************************************
 string Param::print() {
     return paramString;
-}
-
-string Param::checkString() {
-    return "paramString = " + paramString + " paramExp = " + paramExp;
 }

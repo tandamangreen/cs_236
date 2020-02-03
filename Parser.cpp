@@ -315,6 +315,7 @@ void Parser::expression() {
         addParamExp();
         match(LEFT_PAREN);
         parameter();
+        exp = true;
         addParamExp();
         op();
         parameter();

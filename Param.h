@@ -23,7 +23,6 @@ public:
     void convert();
 
     string print();
-    string checkString();
 
 private:
     string paramString;
