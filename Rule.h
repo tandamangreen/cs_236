@@ -18,13 +18,11 @@ class Rule {
 public:
     void getHeadPredicate(Predicate);
     void getBodyPred(Predicate);
-    
+
     void printRule();
-    
+
 private:
     vector<Predicate> myPredList;
     Predicate headPredicate;
-    int predCount;
-    
 };
 #endif /* Rule_hpp */
