@@ -14,7 +14,7 @@ Parser::Parser() {
     currentPred = Predicate();
     currentParam = Param();
     myDataLog = Datalog();
-    //This is a double test 
+    //This is a triple test 
 }
 
 //*********************************************************************************************
