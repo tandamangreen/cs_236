@@ -14,8 +14,8 @@ void Datalog::getScheme(Predicate currentScheme) {
 }
 
 //*********************************************************************************************
-void Datalog::getFact(Predicate currentScheme) {
-    myFacts.push_back(currentScheme);
+void Datalog::getFact(Predicate currentFact) {
+    myFacts.push_back(currentFact);
 }
 
 //*********************************************************************************************
@@ -99,4 +99,3 @@ void Datalog::printDomain() {
 void Datalog::sortDomain() {
     sort(myDomain.begin(), myDomain.end());
 }
-

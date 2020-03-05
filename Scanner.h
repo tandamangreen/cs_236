@@ -6,8 +6,8 @@
 //  Copyright © 2020 Tanner Green. All rights reserved.
 //
 
-#ifndef Scanner_hpp
-#define Scanner_hpp
+#ifndef Scanner_h
+#define Scanner_h
 
 #include <fstream>
 #include <stdio.h>
@@ -22,7 +22,7 @@ using namespace std;
 class Scanner {
 public:
     Scanner(string fileName);
-    
+
     void scan();
     void scanComment();
     void scanID();
@@ -34,7 +34,7 @@ public:
     void pushToken(tokenType, string, int);
     vector<Token> passTokenVect();
     int passTokenCount();
-    
+
 private:
     string fileName;
     ifstream file;
