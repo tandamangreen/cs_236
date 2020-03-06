@@ -21,12 +21,15 @@ public:
     string getName();
     void setName(string);
     void addParam(Param);
-    
+
+    vector<Param> getParams();
+    Param getParam(int);
+
     void printScheme();
     void printFact();
     void printQuery();
     void printRule();
-    
+
 private:
     vector<Param> myParams;
     int paramCount;

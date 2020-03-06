@@ -25,15 +25,30 @@ public:
     void getRule(Rule);
     void getQuery(Predicate);
     void getCurrentDom(string);
-    
+
+    vector<Predicate> getDatalogFacts();
+    vector<Predicate> getDatalogQueries();
+    vector<Predicate> getDatalogSchemes();
+    vector<Rule> getDatalogRules();
+
     void printScheme();
     void printFact();
     void printRule();
     void printQuery();
     void printDomain();
-    
+
     void sortDomain();
-    
+
+    int schemeSize();
+    int factSize();
+    int querySize();
+    int ruleSize();
+
+    Predicate getCurrentScheme(int);
+    Predicate getCurrentFact(int);
+    Predicate getCurrentQuery(int);
+    Rule getCurrentRule(int);
+
 private:
     vector<Predicate> mySchemes;
     vector<Predicate> myFacts;
@@ -41,7 +56,7 @@ private:
     vector<Rule> myRules;
     vector<string> myDomain;
     bool stringMatch;
-    
+
 };
 
 #endif /* Datalog_hpp */

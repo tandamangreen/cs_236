@@ -29,6 +29,26 @@ void Datalog::getQuery(Predicate currentQuery) {
 }
 
 //*********************************************************************************************
+Predicate Datalog::getCurrentScheme(int index) {
+    return mySchemes[index];
+}
+
+//*********************************************************************************************
+Predicate Datalog::getCurrentFact(int index) {
+    return myFacts[index];
+}
+
+//*********************************************************************************************
+Predicate Datalog::getCurrentQuery(int index) {
+    return myQueries[index];
+}
+
+//*********************************************************************************************
+Rule Datalog::getCurrentRule(int index) {
+    return myRules[index];
+}
+
+//*********************************************************************************************
 void Datalog::getCurrentDom(string currentString) {
     for (uint i = 0; i < myDomain.size(); i++) {
         if (myDomain[i] != currentString) {
@@ -45,8 +65,44 @@ void Datalog::getCurrentDom(string currentString) {
 }
 
 //*********************************************************************************************
+vector<Predicate> Datalog::getDatalogFacts() {
+  return myFacts;
+}
+//*********************************************************************************************
+vector<Predicate> Datalog::getDatalogQueries() {
+  return myQueries;
+}
+//*********************************************************************************************
+vector<Predicate> Datalog::getDatalogSchemes() {
+  return mySchemes;
+}
+//*********************************************************************************************
+vector<Rule> Datalog::getDatalogRules() {
+  return myRules;
+}
+
+//*********************************************************************************************
+int Datalog::schemeSize() {
+  return mySchemes.size();
+}
+
+//*********************************************************************************************
+int Datalog::factSize() {
+  return myFacts.size();
+}
+
+//*********************************************************************************************
+int Datalog::querySize() {
+  return myQueries.size();
+}
+
+//*********************************************************************************************
+int Datalog::ruleSize() {
+  return myRules.size();
+}
+
+//*********************************************************************************************
 void Datalog::printScheme() {
-    cout << "Success!" << endl;
     //Checks and prints all schemes in the datalog objects rule vector
     cout << "Schemes(" << mySchemes.size() << "):" << endl;
     //Cycles through the scheme vector

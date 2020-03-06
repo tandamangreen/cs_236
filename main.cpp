@@ -9,6 +9,7 @@
 #include "Token.h"
 #include "Scanner.h"
 #include "Parser.h"
+#include "Interpreter.h"
 
 
 int main(int argc, const char* argv[]) {
@@ -17,5 +18,8 @@ int main(int argc, const char* argv[]) {
     Parser myParse;
     myParse.matchScan(myScan.passTokenVect());
     myParse.parse();
+    Interpreter myInterpreter(myParse);
+    myInterpreter.createRelations();
+    myInterpreter.printRelations();
     return 0;
 }

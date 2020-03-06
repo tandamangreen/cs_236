@@ -14,7 +14,12 @@ Parser::Parser() {
     currentPred = Predicate();
     currentParam = Param();
     myDataLog = Datalog();
-    //This is a triple test 
+    //This is a triple test
+}
+
+//*********************************************************************************************
+Datalog Parser::getDatalog() {
+  return myDataLog;
 }
 
 //*********************************************************************************************
@@ -57,11 +62,11 @@ void Parser::datalogProgram() {
         query();
         queryList();
         match(EOFILE);
-        myDataLog.printScheme();
-        myDataLog.printFact();
-        myDataLog.printRule();
-        myDataLog.printQuery();
-        myDataLog.printDomain();
+        //myDataLog.printScheme();
+        //myDataLog.printFact();
+        //myDataLog.printRule();
+        //myDataLog.printQuery();
+        //myDataLog.printDomain();
     }
     else {
         error(currentTokenType);

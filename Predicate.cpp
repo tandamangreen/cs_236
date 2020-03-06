@@ -14,6 +14,19 @@ void Predicate::setName(string currentTokenVal) {
 }
 
 //*********************************************************************************************
+string Predicate::getName() {
+  return predName;
+}
+
+vector<Param> Predicate::getParams() {
+  return myParams;
+}
+
+Param Predicate::getParam(int index) {
+  return myParams[index];
+}
+
+//*********************************************************************************************
 void Predicate::printScheme() {
     cout << "  " << predName;
     for (uint i = 0; i < myParams.size(); i++) {
@@ -72,4 +85,5 @@ void Predicate::printQuery() {
 //*********************************************************************************************
 void Predicate::addParam(Param myParam) {
     myParams.push_back(myParam);
+    paramCount++;
 }
